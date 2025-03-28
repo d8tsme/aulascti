@@ -1,15 +1,28 @@
 package aulaProva;
 
 public class ContaBancaria {
-    private int saldo;
+    private String titular;
+    private double saldo;
+    public ContaBancaria(String titular, double saldo){
+        this.titular = titular;
+        this.saldo = saldo;
+    }
+    
+    public String getTitular(){
+        return titular;
+    }
 
-    public int getSaldo(){
+    public double getSaldo(){
         return saldo;
     }
 
     public String depositar(int qtd){
-        this.saldo += qtd;
-        return("Depósito realizado com sucesso!");
+        if(qtd<=0){
+            return("Valor inválido para depósito.");
+        } else {
+            this.saldo += qtd;
+            return("Depósito realizado com sucesso!");
+        }
     }
 
     public String sacar(int qtd){

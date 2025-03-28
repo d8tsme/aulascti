@@ -1,8 +1,10 @@
 package aulaProva;
 
 public class Aluno {
-	String nome;
-	double nota;
+	private String nome;
+	private double nota;
+	private int matricula;
+	
 	public Aluno(String nome, double nota) {
 		super();
 		this.nome = nome;
@@ -19,6 +21,14 @@ public class Aluno {
 	}
 	public void setNota(double nota) {
 		this.nota = nota;
+	}
+
+	public int getMatricula(){
+		return matricula;
+	}
+
+	public void setMatricula(int matricula){
+		this.matricula = matricula;
 	}
 	
 }
