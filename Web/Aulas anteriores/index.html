@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bom Dia!</title>
+</head>
+<body>
+    <h1>Aula 1</h1>
+    <h3>Somando valores:</h3>
+    <p>2 + 2 = <output id="out1"></output></p>
+
+    <h2>Atividade:</h2>
+    <table>
+        <tr><td><p>23 + 37 = <output id="out2"></output></p></td></tr>
+        <tr><td><p>35 - 48 = <output id="out3"></output></p></td></tr>
+        <tr><td><p>564 dividido por 3 = <output id="out5"></output></p></td></tr>
+        <tr><td><p>2 elevado a 10 = <output id="out6"></output></p></td></tr>
+        <tr><td><p>123 x 76 = <output id="out4"></output></p></td></tr>
+        <tr><td><p>256 elevado por 1/4 = <output id="out7"></output></p></td></tr>
+    </table>
+
+    <p>Exemplo de operação utilizando o MOD (%):</p>
+    <p>12 % 5 = <output id="out8"></output></p>
+
+    <h4>Exemplo de Estrutura de Decisão:</h4>
+    <table id="table2">
+        <tr>
+            <td><p>O mês de Janeiro é um mês <output id="out9"></output></p></td>
+        </tr>
+        <tr>
+            <td><p>O mês de Fevereiro é um mês <output id="out10"></output></p></td>
+        </tr>
+        <tr>
+            <td><p>O mês de Março é um mês <output id="out11"></output></p></td>
+        </tr>
+        <tr>
+            <td><p>O mês de Abril é um mês <output id="out12"></output></p></td>
+        </tr>
+        <tr>
+            <td><p>O mês de Maio é um mês <output id="out13"></output></p></td>
+        </tr>
+        <tr>
+            <td><p>O mês de Junho é um mês <output id="out14"></output></p></td>
+        </tr>
+        <tr>
+            <td><p>O mês de Julho é um mês <output id="out15"></output></p></td>
+        </tr>
+        <tr>
+            <td><p>O mês de Agosto é um mês <output id="out16"></output></p></td>
+        </tr>
+        <tr>
+            <td><p>O mês de Setembro é um mês <output id="out17"></output></p></td>
+        </tr>
+        <tr>
+            <td><p>O mês de Outubro é um mês <output id="out18"></output></p></td>
+        </tr>
+        <tr>
+            <td><p>O mês de Novembro é um mês <output id="out19"></output></p></td>
+        </tr>
+        <tr>
+            <td><p>O mês de Dezembro é um mês <output id="out20"></output></p></td>
+        </tr>
+    </table>
+    
+    <script>
+        document.getElementById('out1').value = 2 + 2;
+        document.getElementById('out2').value = 23 + 37;
+        document.getElementById('out3').value = 35 - 48;
+        document.getElementById('out4').value = 123 * 76;
+        document.getElementById('out5').value = 564 / 3;
+        document.getElementById('out6').value = 2 ** 10;
+        document.getElementById('out7').value = 256 ** (1/4);
+        document.getElementById('out8').value = 12 % 5;
+            const constant = "Esse valor não altera";
+            let variavel1 = "Este altera"
+            var variavel2 = "Este altera também"
+
+            let variavel3 = null;
+            var variavel4
+
+            let mes1 = 1;
+            if(mes1 % 2 == 0){
+                document.getElementById('out9').value = 'par';
+            } else {
+                document.getElementById('out9').value = 'impar'
+            }
+
+            let mes2 = 2;
+            if(mes2 % 2 == 0){
+                document.getElementById('out10').value = 'par';
+            } else {
+                document.getElementById('out10').value = 'impar'
+            }
+
+            let mes3 = 3;
+            if(mes3 % 2 == 0){
+                document.getElementById('out11').value = 'par';
+            } else {
+                document.getElementById('out11').value = 'impar'
+            }
+
+            let mes4 = 4;
+            if(mes4 % 2 == 0){
+                document.getElementById('out12').value = 'par';
+            } else {
+                document.getElementById('out12').value = 'impar'
+            }
+            let mes5 = 5;
+            if(mes5 % 2 == 0){
+                document.getElementById('out13').value = 'par';
+            } else {
+                document.getElementById('out13').value = 'impar'
+            }
+
+            let mes6 = 6;
+            if(mes6 % 2 == 0){
+                document.getElementById('out14').value = 'par';
+            } else {
+                document.getElementById('out14').value = 'impar'
+            }
+
+            let mes7 = 7;
+            if(mes7 % 2 == 0){
+                document.getElementById('out15').value = 'par';
+            } else {
+                document.getElementById('out15').value = 'impar'
+            }
+
+            let mes8 = 8;
+            if(mes8 % 2 == 0){
+                document.getElementById('out16').value = 'par';
+            } else {
+                document.getElementById('out16').value = 'impar'
+            }
+
+            let mes9 = 9;
+
+            if(mes9 % 2 == 0){
+                document.getElementById('out17').value = 'par';
+            } else {
+                document.getElementById('out17').value = 'impar'
+            }
+
+            let mes10 = 10;
+            if(mes10 % 2 == 0){
+                document.getElementById('out18').value = 'par';
+            } else {
+                document.getElementById('out18').value = 'impar'
+            }
+
+            let mes11 = 11;
+            if(mes11 % 2 == 0){
+                document.getElementById('out19').value = 'par';
+            } else {
+                document.getElementById('out19').value = 'impar'
+            }
+
+            let mes12 = 12;
+            if(mes12 % 2 == 0){
+                document.getElementById('out20').value = 'par';
+            } else {
+                document.getElementById('out20').value = 'impar'
+            }
+        
+    </script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+body {
+    text-align: center;
+    font-family:'Montserrat';
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+}
+
+table{
+    background-color: rgb(130, 174, 255);
+    width: 40vh;
+    padding: 4vh;
+    margin: auto;
+    border-radius: 5rem;
+    margin-bottom: 2rem;
+}
+
+tr>td{
+    background-color: rgb(255, 242, 229);
+    border-radius: 1rem;
+    padding: 0.5rem;
+    transition: all ease 0.3s;
+}
+
+tr>td:hover{
+    background-color: rgb(253, 253, 253);
+    box-shadow: 0 0 1rem white;
+    transform: scale(1.03);
+    border-radius: 1rem;
+    padding: 0.5rem;
+    }
+
+
+output{
+    font-weight: bold;
+    font-size: larger;
+}
+
+#table2{
+    width: 60vh;
+}
+
+h1{
+    font-size: 7rem;
+    margin-bottom: -1rem;
+    margin-top: 0;
+    letter-spacing: 0.2rem;
+    color: rgba(0, 0, 255, 0.452);
+    text-shadow: 0 1rem 1rem rgb(130, 174, 255);
+    transition: all ease 0.8s;
+
+}
+
+h1:hover{
+    font-size: 12rem;
+    margin-bottom: -1rem;
+    margin-top: 0;
+    letter-spacing: -1rem;
+    color: rgba(0, 0, 255, 0.452);
+    text-shadow: 0 1rem 1rem rgb(130, 174, 255);
+}
+    </style>
+</body>
+</html>

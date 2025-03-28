@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="indcss.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Calcultrapremium++</h1>
+
+    <p>Coloque um número</p>
+    <input type="number" id="um"> 
+
+    <p>Coloque outro número</p>
+    <input type="number" id="dois"><br>
+
+    <select id="select">
+        <option value="1">soma</option>
+        <option value="2">subtração</option>
+        <option value="3">divisão</option>
+        <option value="4">multiplicação</option>
+        <option value="5">potenciação</option>
+    </select>
+
+    <button onclick="calcular()">Send</button>
+
+    <div class="resultado">
+        <p><output id="out"></output></p>
+    </div>
+
+    <p>Coloque o número divisor</p>
+    <input type="number" id="tres">
+
+    <p>Coloque o número máximo</p>
+    <input type="number" id="quatro"><br>
+
+    <p>Coloque o número mínimo</p>
+    <input type="number" id="cinco"><br>
+
+    <button onclick="divisiveis()">Send</button>
+
+    <div class="resultado">
+        <p><output id="out1"></output></p>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>

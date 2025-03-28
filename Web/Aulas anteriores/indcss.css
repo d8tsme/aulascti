@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+body {
+    display: block;
+    flex-direction: column;
+    width: 60vh;
+    margin: auto;
+    margin-top: 6vh;
+    font-family: 'Montserrat';
+    background-color: rgb(244, 250, 255);
+    background-image: url('gifi1.gif');  /* Caminho para o seu GIF */
+    background-size: cover;        /* Faz o fundo cobrir toda a tela */
+    background-position: center;   /* Alinha o fundo no centro da tela */
+    background-repeat: no-repeat;  /* Evita que o fundo se repita */
+
+}
+
+
+body::-webkit-scrollbar {
+    width: 2vh;            /* Largura da barra de rolagem */
+}
+
+body::-webkit-scrollbar-track {
+    background-color: #000a0b15; /* Cor de fundo da trilha da barra */
+    border-radius: 1.8vh;         /* Bordas arredondadas da trilha */
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #0b99ff46;  /* Cor do "polegar" (parte que se move) */
+    border-radius: 1vh;     /* Bordas arredondadas */
+    border: 0.1vh solid #f1f1f1; /* Espaçamento ao redor do polegar */
+    transition: all ease 0.3s;
+}
+
+/* Quando o polegar da rolagem é hover (passa o mouse em cima) */
+body::-webkit-scrollbar-thumb:hover {
+    background-color: #0062ff6f;  /* Cor do polegar ao passar o mouse */
+    transition: all ease 0.3s;
+}
+
+.resultado::-webkit-scrollbar {
+    width: 2vh;            /* Largura da barra de rolagem */
+}
+
+.resultado::-webkit-scrollbar-track {
+    background-color: #000a0b15; /* Cor de fundo da trilha da barra */
+    border-radius: 1.8vh;         /* Bordas arredondadas da trilha */
+}
+
+.resultado::-webkit-scrollbar-thumb {
+    background-color: #0b99ff46;  /* Cor do "polegar" (parte que se move) */
+    border-radius: 1vh;     /* Bordas arredondadas */
+    border: 0.1vh solid #f1f1f1; /* Espaçamento ao redor do polegar */
+    transition: all ease 0.3s;
+}
+
+/* Quando o polegar da rolagem é hover (passa o mouse em cima) */
+.resultado::-webkit-scrollbar-thumb:hover {
+    background-color: #0062ff6f;  /* Cor do polegar ao passar o mouse */
+    transition: all ease 0.3s;
+}
+
+p {
+    text-shadow: 0 0.09vh rgb(85, 215, 255);
+    color: aliceblue;
+    font-size: 4vh;
+    margin-bottom: 1vh;
+    transition: 0.5s all ease;
+    letter-spacing: -0.2vh;
+}
+
+p:hover {
+    text-shadow: 0 0.8vh rgba(122, 85, 255, 0.641);
+    font-size: 4vh;
+    font-weight: bolder;
+    margin-bottom: 1vh;
+}
+
+h1 {
+    font-size: 7vh;
+    color: rgb(229, 221, 255);
+    text-shadow: 0 0 1vh;
+}
+
+input {
+    background-color: transparent;
+    border-style: none;
+    border: solid 0.1vh rgb(199, 228, 255);
+    box-shadow: 0 0 1vh rgb(199, 228, 255);
+    width: 50vh;
+    height: 5vh;
+    color: aliceblue;
+    border-radius: 1vh;
+    margin-bottom: 1vh;
+    font-family: 'Montserrat';
+    text-align: center;
+}
+
+button{
+    background-color: transparent;
+    border-style: none;
+    border: solid 0.1vh rgb(199, 228, 255);
+    box-shadow: 0 0 1vh rgb(199, 228, 255);
+    border-radius: 1vh;
+    margin-bottom: 1vh;
+    font-family: 'Montserrat';
+    transition: all ease 0.3s;
+}
+
+button:hover{
+    background-color: rgba(131, 43, 226, 0.308);
+    transform: scale(1.15);
+    color:aliceblue;
+    border-style: none;
+    border: solid 0.1vh rgb(199, 228, 255);
+    box-shadow: 0 0 1vh rgb(199, 228, 255);
+    border-radius: 1vh;
+    margin-bottom: 1vh;
+    font-family: 'Montserrat';
+}
+
+.resultado {
+    background-color: rgba(141, 43, 226, 0.037);
+    color: white;
+    width: 100%;            /* Largura do bloco */
+    max-height: 20vh;      /* Altura máxima */
+    overflow-y: scroll;
+    border-radius: 1vh;
+    text-align: center;
+    padding: 5vh;
+    margin-bottom: 5vh;
+    transition: all ease 0.3s;
+}
+
+
+select{
+    background-color: transparent;
+    border-style: none;
+    border: solid 0.1vh rgb(199, 228, 255);
+    box-shadow: 0 0 1vh rgb(199, 228, 255);
+    border-radius: 1vh;
+    text-align: center;
+    color: aliceblue;
+    margin-bottom: 1vh;
+    font-size: 3vh;
+    font-family: 'Montserrat';
+}   
+
+button{
+    color:white ;
+}
+
+option {
+    background-color: rgb(246, 199, 255);
+    color: rgb(85, 6, 165);
+    font-family: 'Montserrat';
+    padding: 3vh; /* Adicionando algum preenchimento */
+    font-size: 4vh;
+ }
