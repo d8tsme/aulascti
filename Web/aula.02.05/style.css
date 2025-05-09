@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Coral+Pixels&family=Fleur+De+Leah&family=Quicksand:wght@300..700&family=Special+Gothic+Condensed+One&family=Tagesschrift&display=swap');
+
+body{
+    display: flex;
+    justify-content: center;
+    font-family: 'Tagesschrift';
+    background-color: rgb(255, 220, 122);
+    text-align: center;
+}
+
+.sup{
+    margin-top: 1vh;
+}
+
+.card{
+    background-color: rgb(255, 252, 240);
+    padding: 10vh;
+    width: 60vh;
+    box-shadow: 0 0 5vh rgba(85, 42, 5, 0.308);
+    margin-top: 1vh;
+    border-radius: 10vh;
+    display: flex;
+    flex-direction: column;
+}
+
+button{
+    background-color: rgba(0, 0, 0, 0.479);
+    border-style: none;
+    border-radius: 10vh;
+    color: white;
+    padding: 1vh;
+    transition: all ease 0.25s;
+    font-family: 'Tagesschrift';
+}
+
+button:hover{
+    background-color: rgba(15, 61, 114, 0.767);
+    border-style: none;
+    border-radius: 10vh;
+    color: white;
+    padding: 1vh;
+    box-shadow: 0 0 2vh burlywood;
+    transform: scale(1.1);
+
+}
+
+.card > h1{
+    font-size: 7vh;
+    margin: -0.3vh;
+    color: rgb(0, 0, 0);
+    transition: all ease 0.5s;
+    text-shadow: none;
+}
+
+h2{
+    font-family: 'Fleur de Leah';
+    font-size: 10vh;
+    margin-top: -14vh;
+    margin-bottom: -2vh;
+    color: rgb(0, 89, 255);
+    text-shadow: 0 0 5vh rgb(255, 220, 122);
+    transition: all ease 0.5s;
+}
+
+h2:hover{
+    text-shadow: 0 0 0.3vh rgb(0, 81, 255);
+    transform: scale(1.1);
+}
+
+p {
+    font-weight: normal;
+    transition: all ease 0.5s;
+}
+
+p:hover {
+    transform: scale(1.02);
+}
+
+.card > h1:hover{
+
+    letter-spacing: 0.5vh;
+    color: rgb(0, 89, 255);
+}
+
+h1 {
+    font-size: 10vh;
+    color: rgb(0, 0, 0);
+    transition: all ease 0.5s;
+}
