@@ -55,8 +55,9 @@ let pessoas = [
 
 let index = 0
 
-const proxpag = document.getElementsByTagName("h2")
-proxpag[0].onclick =() => window.location.href = "atv0905.html"
+const proxpag1 = document.getElementById("Linkn1")
+proxpag1.onclick =() => window.location.href = "atv0905.html"
+
 
 const button = document.getElementsByTagName("button")
 button[0].onclick = function(){

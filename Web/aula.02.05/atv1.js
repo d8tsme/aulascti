@@ -10,3 +10,6 @@ function somaArray (){
 
 const button = document.getElementsByName("button")
 button[0].onclick = somaArray
+
+const proxpag2 = document.getElementById("Linkn2")
+proxpag2.onclick =() => window.location.href = "index.html"
