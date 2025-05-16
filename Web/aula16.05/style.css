@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Birthstone&family=Fleur+De+Leah&family=Poetsen+One&family=Quantico:ital,wght@0,400;0,700;1,400;1,700&family=Share+Tech&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin-top: 40px;
+}
+
+body {
+    font-family: 'Sour Gummy';
+    display: flex;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('424dfba5d6d427ec90b801585a983217.jpg');
+
+.card {
+    background-color: rgba(0, 162, 255, 0.541);
+    display: flex;
+    justify-content: center;
+    margin-top: 30vh;
+    border: 4px solid rgba(6, 85, 255, 0.178);
+    box-shadow: 0 0 3vh rgb(255, 255, 255);
+    width: 450px;
+    height: 290px;
+    border-radius: 5vh;
+}
+
+input{
+    background-color: rgba(255, 255, 255, 0.267);
+    text-shadow: 0 0 5px black;
+    border-radius: 1vh;
+    border-style: none;
+    border: 2px solid rgba(0, 68, 255, 0.199);
+    margin-bottom: 2vh;
+    height: 4vh;
+}
+
+label {
+    text-shadow: 0 0 8px black;
+    font-family: 'Sour Gummy';
+    color: aliceblue;
+    font-size: 20px;
+}
+
+#submit{
+    font-size: 30px;
+    color: aliceblue;
+    font-family: 'Sour Gummy';
+    background-color: rgba(255, 255, 255, 0.267);
+    border-radius: 1vh;
+    border-style: none;
+    border: 2px solid rgba(0, 68, 255, 0.199);
+    margin-bottom: 2vh;
+    height: 7vh;
+}
