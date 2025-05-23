@@ -14,6 +14,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-image: url('424dfba5d6d427ec90b801585a983217.jpg');
+}
 
 .card {
     background-color: rgba(0, 162, 255, 0.541);
@@ -35,6 +36,7 @@ input{
     border: 2px solid rgba(0, 68, 255, 0.199);
     margin-bottom: 2vh;
     height: 4vh;
+    color: aliceblue;
 }
 
 label {

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1 id="titulo">Eventos em JS</h1>
+    <p id="paragrafo">lorem ipsum daqueles</p>
+    <p id="keytracker"></p>
+    <div class="buttonCard">
+        <button>corzinha de fundo</button>
+        <button>corzinha de texto</button>
+        <input type="color" id="colorpick">
+        <button>Acabe com a graça</button>
+        <button>apague as luzes</button>
+        <button>mude a descrição</button>
+        <button>mude o titulo</button>
+        <button>Qual tecla clicou?</button>
+
+    </div>
+    
+    <script>
+        let button = document.getElementsByTagName('button');
+        button[0].addEventListener("click", funcao1);
+        button[1].addEventListener("click", funcao2);
+        button[2].addEventListener("click", funcao3);
+        button[3].addEventListener("click", funcao4);
+        button[4].addEventListener("click", funcao5);
+        button[5].addEventListener("click", funcao6);
+        button[6].addEventListener("click", funcao7);
+
+        let index1 = 0;
+        let stopf = false;
+        let titulo = document.getElementById("titulo");
+        let paragrafo = document.getElementById("paragrafo");
+        let ktrack = document.getElementById('keytracker');
+        let colorpick = document.getElementById('colorpick');
+        
+        let colors1 = [
+            'blue', 'red', 'purple', 'pink', 'green', 'yellow', 'orange',
+        ]
+        
+        function funcao1(){
+            stopf = !stopf
+            setInterval(funcolor, 800)
+        }
+
+        function funcolor(){
+            if(stopf == true){
+                document.body.style.backgroundColor = colors1[index1];
+                index1 = (index1 + 1) % 7;
+            }
+        }
+
+        function funcao2(){
+            document.body.style.color = colorpick.value
+        }
+
+        function funcao3(){
+            document.body.style.backgroundColor = 'white';
+            document.body.style.color = 'black';
+            titulo.textContent = 'Eventos em JS';
+            paragrafo.textContent = 'lorem ipsum daqueles'
+            stopf = false;
+        }
+        
+        function funcao4(){
+            stopf = false;
+            document.body.style.backgroundColor = 'black';
+            document.body.style.color = 'black';
+        }
+
+        function funcao5(){
+            texto = prompt("Escreve aí");
+            paragrafo.textContent = texto;
+        }
+
+        function funcao6(){
+            texto = prompt("Escreve aí");
+            titulo.textContent = texto;
+        }
+
+        function funcao7(){
+            document.body.addEventListener("keydown", function(event) {
+                ktrack.textContent = "Você apertou a tecla " + event.key;   
+            })
+        }
+
+        </script>
+
+</body>
+</html>
