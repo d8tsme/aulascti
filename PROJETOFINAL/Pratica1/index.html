@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>CRUD Bandas</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; }
+    input, button, textarea { margin: 5px 0; display: block; width: 300px; }
+    img { height: 50px; margin-top: 5px; }
+    .banda { border: 1px solid #ccc; padding: 10px; margin-top: 10px; }
+  </style>
+</head>
+<body>
+
+  <h1>CRUD - Bandas</h1>
+
+  <form id="form">
+    <input type="number" id="id" placeholder="ID (somente no PUT)" />
+    <input type="text" id="nome" placeholder="Nome" required />
+    <input type="text" id="nacionalidade" placeholder="nacionalidade" required />
+    <input type="file" id="fotoInput" accept="image/*" />
+    <textarea id="fotoBase64" placeholder="Foto (base64)" rows="4" readonly></textarea>
+    <button type="submit">Salvar (POST/PUT)</button>
+  </form>
+
+  <button onclick="carregarBandas()">CARREGAR BANDAS</button>
+
+  <div id="bandas"></div>
+
+  <script>
+    const API_URL = "https://f4c4-2804-18-4849-3460-c4e0-fad8-3465-4a27.ngrok-free.app/bandas";
+
+    document.getElementById("fotoInput").addEventListener("change", function () {
+      const file = this.files[0];
+      const reader = new FileReader();
+      reader.onload = () => {
+        document.getElementById("fotoBase64").value = reader.result;
+      };
+      if (file) reader.readAsDataURL(file);
+    });
+
+    document.getElementById("form").addEventListener("submit", async function (e) {
+      e.preventDefault();
+      const id = document.getElementById("id").value;
+      const nome = document.getElementById("nome").value;
+      const nacionalidade = document.getElementById("nacionalidade").value;
+      const foto = document.getElementById("fotoBase64").value;
+
+      const payload = { id: Number(id), nome, nacionalidade, foto };
+
+      if (id) {
+        await fetch(API_URL, {
+          method: "PUT",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload),
+        });
+      } else {
+        await fetch(API_URL, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload),
+        });
+      }
+
+      this.reset();
+      document.getElementById("fotoBase64").value = "";
+      carregarBandas();
+    });
+
+    async function carregarBandas() {
+  const res = await fetch(API_URL, {
+    method: "GET",
+    headers: {
+      "ngrok-skip-browser-warning": "true"
+    }
+  });
+
+  const bandas = await res.json();
+  const container = document.getElementById("bandas");
+  container.innerHTML = "";
+
+  bandas.forEach(banda => {
+    const div = document.createElement("div");
+    div.className = "banda";
+    div.innerHTML = `
+      <strong>ID:</strong> ${banda.id} <br>
+      <strong>Nome:</strong> ${banda.nome} <br>
+      <strong>Nacionalidade:</strong> ${banda.nacionalidade} <br>
+      <img src="${banda.foto}" alt="Foto"/><br>
+      <button onclick="deletarBanda(${banda.id})">🗑️ Deletar</button>
+    `;
+    container.appendChild(div);
+  });
+}
+
+    async function deletarBanda(id) {
+      if (confirm("Deseja realmente deletar a banda?")) {
+        await fetch(`${API_URL}/${id}`, { method: "DELETE" });
+        carregarBandas();
+      }
+    }
+
+    carregarBandas();
+  </script>
+
+</body>
+</html>
