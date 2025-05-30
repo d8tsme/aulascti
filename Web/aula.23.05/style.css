@@ -32,13 +32,14 @@ button{
 
     background-color: rgba(255, 255, 255, 0.479);
     border-radius: 2vw;
-    opacity: 60%;
+    opacity: 50%;
 }
 
 button:hover{
     opacity: 100%;
-    background-color: rgba(255, 255, 255, 0.616);
-    box-shadow: 0 0 5vh rgb(0, 255, 242);
+    background-color: rgba(0, 0, 0, 0.836);
+    color: white;
+    box-shadow: 0 0 5vh rgb(255, 0, 0);
     border-radius: 2vw;
     transform: scale(1.03);
 }
@@ -55,22 +56,49 @@ input{
 
     background-color: rgba(255, 255, 255, 0.479);
     border-radius: 2vw;
-    opacity: 60%;
+    opacity: 50%;
 }
 
 input:hover{
         opacity: 100%;
-    background-color: rgba(255, 255, 255, 0.616);
-    box-shadow: 0 0 5vh rgb(0, 255, 242);
+    background-color: rgba(0, 0, 0, 0.836);
+    color: white;
+    box-shadow: 0 0 5vh rgb(255, 0, 0);
     border-radius: 2vw;
     transform: scale(1.03);
 }
 
-.buttonCard{
-
+.bCard{
+    background-color: rgb(255, 255, 255);
+    border-radius: 100rem;
+    width: 20rem;
+    height: 20rem;
+    position: absolute;
+    opacity: 50%;
+    border: 2rem solid;
+    transition: all ease 1s;
 }
 
 #keytracker{
     margin-top: 0;
     font-size: 3vw;
+}
+
+.actionUp {
+    position: relative;
+    width: 50%;
+    height: 50%;
+}
+
+#sideText{
+    font-size: 3vh;
+
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    font-size: 3vw;
+    transition: all ease 1s;
+    transform: scale(0);
 }

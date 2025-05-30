@@ -11,19 +11,38 @@
     <h1 id="titulo">Eventos em JS</h1>
     <p id="paragrafo">lorem ipsum daqueles</p>
     <p id="keytracker"></p>
-    <div class="buttonCard">
-        <button>corzinha de fundo</button>
-        <button>corzinha de texto</button>
-        <input type="color" id="colorpick">
-        <button>Acabe com a graça</button>
-        <button>apague as luzes</button>
-        <button>mude a descrição</button>
-        <button>mude o titulo</button>
-        <button>Qual tecla clicou?</button>
-
+    <div class="actionsUp">
+        <div class="buttonCard">
+            <button>corzinha de fundo</button>
+            <button>corzinha de texto</button>
+            <input type="color" id="colorpick">
+            <button>Acabe com a graça</button>
+            <button>apague as luzes</button>
+            <button>mude a descrição</button>
+            <button>mude o titulo</button>
+            <button>Qual tecla clicou?</button>
+            <button>Adicione + texto</button>
+            <button>Saudações</button>
+        </div>
+            <p id="sideText"></p>
+            <div class="bCard"> </div>
+            <div class="bCard"> </div>
+            <div class="bCard"> </div>
+            <div class="bCard"> </div>
+            <form action="">
+                <label for="nome">Insira teu nome</label>
+                <input type="text" name="nome" id="nome">
+                <label for="idade">Insira tua idade</label>
+                <input type="number" name="idade" id="idade">
+                <button type="submit">Enviar</button>
+            </form>
     </div>
     
     <script>
+        function Pessoa(nome, idade){
+            this.nome = nome;
+            this.idade = idade;
+        }
         let button = document.getElementsByTagName('button');
         button[0].addEventListener("click", funcao1);
         button[1].addEventListener("click", funcao2);
@@ -32,13 +51,38 @@
         button[4].addEventListener("click", funcao5);
         button[5].addEventListener("click", funcao6);
         button[6].addEventListener("click", funcao7);
+        button[7].addEventListener("click", funcao8);
+        button[8].addEventListener("click", funcao9);
+
+
+        let circle = document.getElementsByClassName("bCard");
+        circle[0].addEventListener("click", () => MOVEC(0)); 
+        circle[1].addEventListener("click", () => MOVEC(1)); 
+        circle[2].addEventListener("click", () => MOVEC(2)); 
+        circle[3].addEventListener("click", () => MOVEC(3)); 
+        function MOVEC(i){
+            let r = Math.random()
+            let g = Math.random()
+            let b = Math.random()
+            circle[i].style.backgroundColor = `rgb(${r*255}, ${g*255}, ${b*255})`
+            let posX = Math.random()
+            let posY = Math.random()
+            circle[i].style.left = (posX*100) + "%"
+            circle[i].style.top = (posY*100) + "%"
+        }
 
         let index1 = 0;
         let stopf = false;
+        let form = document.getElementsByTagName("form")
         let titulo = document.getElementById("titulo");
         let paragrafo = document.getElementById("paragrafo");
+        let sideText = document.getElementById("sideText")
         let ktrack = document.getElementById('keytracker');
         let colorpick = document.getElementById('colorpick');
+
+        form.addEventListener("submit", function(){
+            let p = new Pessoa()
+        })
         
         let colors1 = [
             'blue', 'red', 'purple', 'pink', 'green', 'yellow', 'orange',
@@ -65,6 +109,7 @@
             document.body.style.color = 'black';
             titulo.textContent = 'Eventos em JS';
             paragrafo.textContent = 'lorem ipsum daqueles'
+            sideText.textContent = "    ";
             stopf = false;
         }
         
@@ -90,6 +135,14 @@
             })
         }
 
+        function funcao8(){
+            texto = prompt("Escreve aí");
+            sideText.textContent = texto;
+        }
+
+        function funcao9(){
+            form[0].style.transform = "scale(1)"
+        }
         </script>
 
 </body>
