@@ -22,13 +22,14 @@ p{
 }
 
 button{
-    transition: all ease 0.3s;
+    transition: all ease 0.7s;
     font-family: 'Sour Gummy';
-    width: 30vw;
+    width: 10vw;
+    height: 1vw;
     margin: auto;
-    margin-bottom: 1vh  ;
+    margin-bottom: 2vh  ;
     padding: 1vw;
-    font-size: 3vw;
+    font-size: 0.1vw;
 
     background-color: rgba(255, 255, 255, 0.479);
     border-radius: 2vw;
@@ -36,23 +37,29 @@ button{
 }
 
 button:hover{
-    opacity: 100%;
-    background-color: rgba(0, 0, 0, 0.836);
-    color: white;
-    box-shadow: 0 0 5vh rgb(255, 0, 0);
+    transition: all ease 0.3s;
+    font-family: 'Sour Gummy';
+    width: 20vw;
+    height: 5.5vw;
+    margin: auto;
+    margin-bottom: 4vh  ;
+    padding: 1vw;
+    font-size: 2vw;
+
+    background-color: rgba(109, 172, 255, 0.479);
     border-radius: 2vw;
-    transform: scale(1.03);
+    opacity: 100%;
 }
 
 input{
     transition: all ease 0.3s;
     font-family: 'Sour Gummy';
-    width: 30vw;
-    height: 5.5vw;
+    width: 10vw;
+    height: 1vw;
     margin: auto;
     margin-bottom: 1vh  ;
     padding: 1vw;
-    font-size: 3vw;
+    font-size: 0.1vw;
 
     background-color: rgba(255, 255, 255, 0.479);
     border-radius: 2vw;
@@ -60,22 +67,28 @@ input{
 }
 
 input:hover{
-        opacity: 100%;
-    background-color: rgba(0, 0, 0, 0.836);
-    color: white;
-    box-shadow: 0 0 5vh rgb(255, 0, 0);
+    transition: all ease 0.3s;
+    font-family: 'Sour Gummy';
+    width: 20vw;
+    height: 5.5vw;
+    margin: auto;
+    margin-bottom: 1vh  ;
+    padding: 1vw;
+    font-size: 2vw;
+
+    background-color: rgba(109, 172, 255, 0.479);
     border-radius: 2vw;
-    transform: scale(1.03);
+    opacity: 100%;
 }
 
 .bCard{
     background-color: rgb(255, 255, 255);
     border-radius: 100rem;
-    width: 20rem;
-    height: 20rem;
+    width: 10rem;
+    height: 10rem;
     position: absolute;
     opacity: 50%;
-    border: 2rem solid;
+    border: 1rem solid;
     transition: all ease 1s;
 }
 
@@ -88,11 +101,14 @@ input:hover{
     position: relative;
     width: 50%;
     height: 50%;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
 }
 
 #sideText{
     font-size: 3vh;
-
+    width: 30rem;
 }
 
 form{
@@ -101,4 +117,15 @@ form{
     font-size: 3vw;
     transition: all ease 1s;
     transform: scale(0);
+}
+
+.buttonCard{
+    width: 20rem;
+}
+
+.contentBox{
+    display: flex;
+    flex-direction: row;
+    padding: 3rem;
+    justify-content: space-between;
 }

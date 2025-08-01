@@ -7,16 +7,18 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <h1 id="titulo">Eventos em JS</h1>
-    <p id="paragrafo">lorem ipsum daqueles</p>
-    <p id="keytracker"></p>
-    <div class="actionsUp">
+    <div class="txts">
+        <h1 id="titulo">Eventos em JS</h1>
+        <p id="paragrafo">lorem ipsum daqueles</p>
+        <p id="saudacoes"></p>
+        <p id="keytracker"></p>
+    </div>
+    <div class="contentBox">
         <div class="buttonCard">
             <button>corzinha de fundo</button>
             <button>corzinha de texto</button>
             <input type="color" id="colorpick">
-            <button>Acabe com a graça</button>
+            <button>Acabe c/ a graça</button>
             <button>apague as luzes</button>
             <button>mude a descrição</button>
             <button>mude o titulo</button>
@@ -24,20 +26,29 @@
             <button>Adicione + texto</button>
             <button>Saudações</button>
         </div>
-            <p id="sideText"></p>
-            <div class="bCard"> </div>
-            <div class="bCard"> </div>
-            <div class="bCard"> </div>
-            <div class="bCard"> </div>
-            <form action="">
-                <label for="nome">Insira teu nome</label>
-                <input type="text" name="nome" id="nome">
-                <label for="idade">Insira tua idade</label>
-                <input type="number" name="idade" id="idade">
-                <button type="submit">Enviar</button>
-            </form>
+        <p id="sideText"></p>
+        <div class="actionsUp">
+                <div class="bCard"> </div>
+                <div class="bCard"> </div>
+                <div class="bCard"> </div>
+                <div class="bCard"> </div>
+                <div class="bCard"> </div>
+                <div class="bCard"> </div>
+                <div class="bCard"> </div>
+                <div class="bCard"> </div>
+                <div class="bCard"> </div>
+                <div class="bCard"> </div>
+                <div class="bCard"> </div>
+                <div class="bCard"> </div>  
+                <form action="">
+                    <label for="nome">Insira teu nome</label>
+                    <input type="text" name="nome" id="nome">
+                    <label for="idade">Insira tua idade</label>
+                    <input type="number" name="idade" id="idade">
+                    <button type="submit">Enviar</button>
+                </form>
+        </div>
     </div>
-    
     <script>
         function Pessoa(nome, idade){
             this.nome = nome;
@@ -53,6 +64,7 @@
         button[6].addEventListener("click", funcao7);
         button[7].addEventListener("click", funcao8);
         button[8].addEventListener("click", funcao9);
+        button[9].addEventListener("click", funcao10);
 
 
         let circle = document.getElementsByClassName("bCard");
@@ -60,6 +72,14 @@
         circle[1].addEventListener("click", () => MOVEC(1)); 
         circle[2].addEventListener("click", () => MOVEC(2)); 
         circle[3].addEventListener("click", () => MOVEC(3)); 
+        circle[4].addEventListener("click", () => MOVEC(4)); 
+        circle[5].addEventListener("click", () => MOVEC(5)); 
+        circle[6].addEventListener("click", () => MOVEC(6)); 
+        circle[7].addEventListener("click", () => MOVEC(7)); 
+        circle[8].addEventListener("click", () => MOVEC(8)); 
+        circle[9].addEventListener("click", () => MOVEC(9)); 
+        circle[10].addEventListener("click", () => MOVEC(10)); 
+        circle[11].addEventListener("click", () => MOVEC(11)); 
         function MOVEC(i){
             let r = Math.random()
             let g = Math.random()
@@ -78,6 +98,7 @@
         let paragrafo = document.getElementById("paragrafo");
         let sideText = document.getElementById("sideText")
         let ktrack = document.getElementById('keytracker');
+        let saudacoes = document.getElementById('saudacoes');
         let colorpick = document.getElementById('colorpick');
 
         form.addEventListener("submit", function(){
@@ -89,8 +110,8 @@
         ]
         
         function funcao1(){
-            stopf = !stopf
-            setInterval(funcolor, 800)
+            stopf = true
+            setInterval(funcolor, 1000)
         }
 
         function funcolor(){
@@ -105,12 +126,8 @@
         }
 
         function funcao3(){
-            document.body.style.backgroundColor = 'white';
-            document.body.style.color = 'black';
-            titulo.textContent = 'Eventos em JS';
-            paragrafo.textContent = 'lorem ipsum daqueles'
-            sideText.textContent = "    ";
             stopf = false;
+            window.location.reload();
         }
         
         function funcao4(){
@@ -142,6 +159,14 @@
 
         function funcao9(){
             form[0].style.transform = "scale(1)"
+        }
+
+        function funcao10(){
+            event.preventDefault();
+            form[0].style.transform = "scale(0)"
+            let inp1 = document.getElementsByName("nome")
+            let inp2 = document.getElementsByName("idade")
+            saudacoes.textContent = `Olá ${inp1[0].value}, você tem ${inp2[0].value} anos.`
         }
         </script>
 
