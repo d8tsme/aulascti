@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form id="lerForm">
+        <h1>Ver Produtos!</h1>
+        <button type="submit">Click</button>
+    </form>
+    <table id="table">
+
+    </table>
+    <script>
+        const formulario3 = document.getElementById("lerForm")
+        formulario3.addEventListener('submit', async function (event) {
+            event.preventDefault();
+            fetch('https://fakestoreapi.com/products')
+            .then(response => response.json())
+            .then(data => preencheTabela(data));
+            alert("Chegou!")
+        })
+        function preencheTabela(produtos){
+            const tabela = document.getElementById("table")
+            produtos.forEach(produto => {
+                tabela.innerHTML+= `<tr><td>${produto.title}</td></tr>`
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+.imagens {
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    height: 20vw;
+    border-radius: 5vw;
+    gap: 2vw;
+}
+
+img {
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.185);
+}
+
+header {
+    background-color: rgb(127, 150, 255);
+    padding: 1rem;
+}

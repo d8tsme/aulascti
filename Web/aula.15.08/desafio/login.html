@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form id="loginForm">
+        <h1>Login</h1>
+        <input type="text" name="username" id="username" placeholder="username">
+        <input type="password" name="password" id="password" placeholder="password">
+        <button type="submit">Enviar</button>
+    </form>
+
+    <script>
+        const formulario1 = document.getElementById("loginForm");
+
+        formulario1.addEventListener('submit', async function (event) {
+            let usuario = this.username.value;
+            let senha = this.password.value;
+
+            if(usuario == '' || senha == '') {
+                alert("Username and password are required.");
+                return;
+            }
+
+            fetch("http://localhost:8080/login", {
+                method: "POST",
+                body: JSON.stringify({usuario, senha})
+            })
+            .then(response => response.json())
+            .then(token => localStorage.setItem("jwt-token", token))
+            .catch(error => console.error(error));
+        });
+    </script>
+</body>
+</html>
