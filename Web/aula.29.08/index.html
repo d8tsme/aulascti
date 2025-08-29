@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <h1>You clicked <span id="counter">0</span> times.</h1>
+        <button>Click here!</button>
+    </div>
+    <script>
+        document.querySelector("button").addEventListener("click", function(){
+            let countString = sessionStorage.getItem('count');
+            if(countString == null){
+                sessionStorage.setItem('count', '1');
+                countString = "1";
+            }
+            let count = parseInt(countString);
+            document.querySelector("#counter").textContent = count;
+            sessionStorage.setItem("count", ++count);
+        })
+    </script>
+    <style>
+        body{
+            background-color: #D9AE61;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        div{
+            display: flex;
+            flex-direction: column;
+            margin-top: 10rem;
+            background-color: #ffffff;
+            padding: 3rem;
+            border-radius: 1rem;
+            color: #D1462F;
+        }
+        button{
+            border: none;
+            padding: 1rem;
+            border-radius: 1rem;
+            background-color: #D1462F;
+            color: #ffffff;
+            transition: all ease 0.2s;
+
+            &:hover{
+            background-color: #ffffff;
+            color: #D1462F;
+            border: solid #D1462F 0.1rem;
+            text-shadow: 0 0 1px;
+            box-shadow: 0 0 0.5rem;
+            }
+        }
+    </style>
+</body>
+</html>
